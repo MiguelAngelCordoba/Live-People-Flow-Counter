@@ -2,7 +2,7 @@ import cv2
 import time 
 
 # Inicializar la captura de video desde la cámara
-url = "http://192.168.0.5:8080/video"
+url = "http://192.168.0.13:8080/video"
 cap = cv2.VideoCapture(url)  # Reemplaza 'video.mp4' con el nombre de tu archivo de video
 
 # Variables para el seguimiento de personas
@@ -50,6 +50,7 @@ while(cap.isOpened()):
             x, y, w, h = cv2.boundingRect(contour)
             #cv2.drawContours(frame, [contour], -1, (0, 255, 0), 2)
             cv2.rectangle(frame, (x,y), (x+w,y+h), (0,255,0),2)
+            cv2.putText(frame, "Movimiento", (x,y-10), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
             if x_prev is not None and y_prev is not None:
             # Calcula la variación en las coordenadas
