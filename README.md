@@ -1,4 +1,4 @@
-# People Flow Counter live
+# Live People Flow Counter
 Sistema de visión por computadora que rastrea y cuenta el flujo total de personas que ingresan y salen de un recinto mediante una cámara posicionada perpendicular al movimiento en tiempo real.   
 
 Librerias: 
